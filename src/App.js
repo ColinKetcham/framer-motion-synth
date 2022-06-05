@@ -15,8 +15,9 @@ function App() {
         }
       }}
     >
+      Double click page to add sin wave, double click box to turn on and off.
+      Move box Left and Right to change pitch, and up and down to change volume.
       {boxes.map((box) => box)}
-      Double click page to add sin wave, double click box to turn on and off
     </div>
   );
 }
