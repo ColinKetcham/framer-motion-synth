@@ -1,5 +1,4 @@
 import './App.css';
-import { motion } from 'framer-motion';
 import React, { useRef, useState } from 'react';
 import Box from './Box';
 
@@ -17,6 +16,7 @@ function App() {
       }}
     >
       {boxes.map((box) => box)}
+      Double click page to add sin wave, double click box to turn on and off
     </div>
   );
 }
