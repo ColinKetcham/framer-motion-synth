@@ -6,10 +6,12 @@ export function startSynth() {
   const crusher = new Tone.BitCrusher(1).toDestination();
   const chorus = new Tone.Chorus(4, 2.5, 0.5).toDestination();
   const limiter = new Tone.Limiter(-20).toDestination();
-  const fft = new Tone.FFT();
-  synth.connect(fft);
-  console.log('fft', fft);
-
+  // const fft = new Tone.FFT();
+  // synth.connect(fft);
+  // console.log('fft', fft);
+  synth.connect(limiter);
+  synth.connect(chorus);
+  synth.connect(crusher);
   synth.triggerAttack(440);
   synth.triggerRelease();
   return synth;
@@ -35,7 +37,7 @@ export function changeNote(synth, note) {
     //console.log('fucking');
   } else {
     //console.log('changing note', note);
-
+    //console.log(synth);
     synth.setNote(note, '4n');
   }
 }

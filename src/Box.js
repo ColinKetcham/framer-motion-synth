@@ -37,15 +37,11 @@ const Box = ({ appRef }) => {
     <motion.div
       drag
       dragConstraints={appRef}
-      tran
       className={playing ? 'box playing' : 'box notPlaying'}
       onClick={(e) => {
         if (e.detail > 1) {
           setPlaying(!playing);
         }
-      }}
-      onChange={(test) => {
-        console.log(test);
       }}
       onDrag={(test) => {
         setX(test.pageX);
