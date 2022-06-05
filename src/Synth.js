@@ -5,11 +5,9 @@ export function startSynth() {
   const synth = new Tone.Synth().toDestination();
   const crusher = new Tone.BitCrusher(1).toDestination();
   const chorus = new Tone.Chorus(4, 2.5, 0.5).toDestination();
-  const limiter = new Tone.Limiter(-20).toDestination();
-  // const fft = new Tone.FFT();
-  // synth.connect(fft);
-  // console.log('fft', fft);
-  synth.connect(limiter);
+  // const limiter = new Tone.Limiter(-20).toDestination();
+
+  // synth.connect(limiter);
   synth.connect(chorus);
   synth.connect(crusher);
   synth.triggerAttack(440);
