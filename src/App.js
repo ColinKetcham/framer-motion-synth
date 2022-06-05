@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { motion } from 'framer-motion';
 import React, { useRef, useState } from 'react';
